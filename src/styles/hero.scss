@@ -3,8 +3,9 @@
 .hero {
     padding: 5.6vw;
     min-height: 80vh;
-    background-image: url(../images/hero_desktop.jpeg);
+    background-image: url(../../src/images/hero_desktop.jpeg);
     text-align: center;
+    max-width: 100%;
     background-size: cover;
 
     &__content {
@@ -38,17 +39,7 @@
                 img {
                     max-height: 60px;
                 }
-
-                button {
-                    display: block;
-                    height: 60px;
-                    width: 100%;
-                    font-size: 18px;
-                    background-color: #6421ff;
-                    margin-top: 2vw;
-                    margin-bottom: 8px;
-                    color: variaveis.$corTexto;
-                }
+                
             }
         }
     }

@@ -1,5 +1,7 @@
 @use 'hero';
 @use 'variaveis';
+@use 'shows';
+@use 'plans';
 
 
 @font-face {
@@ -23,6 +25,10 @@ body {
     font-family: Avenir, sans-serif;
 }
 
+.button {
+    font-family: Avenir, sans-serif;
+}
+
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
     line-height: $fontSize + 10;
@@ -37,7 +43,7 @@ body {
     @include text(12px);
 }
 
-.text-big {
+.text--big {
     @include text(18px);
 }
 
@@ -62,4 +68,17 @@ body {
     @include text(18px);
     color: variaveis.$corTexto;
     text-decoration: underline;
+}
+
+
+.button {
+    display: block;
+    height: 60px;
+    width: 100%;
+    font-size: 18px;
+    background-color: #6421ff;
+    margin-top: 2vw;
+    margin-bottom: 8px;
+    color: variaveis.$corTexto;
+    cursor: pointer;
 }

@@ -2,6 +2,10 @@
 @use 'variaveis';
 @use 'shows';
 @use 'plans';
+@use 'devices';
+@use 'faq';
+@use 'footer';
+@use 'header';
 
 
 @font-face {
@@ -18,6 +22,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 body {
@@ -37,14 +42,26 @@ body {
 
 .text {
     @include text;
+
+    @media (max-width: 768px) {
+        @include text(14px)
+    }
 }
 
 .text--small {
     @include text(12px);
+
+    @media (max-width: 768px) {
+        @include text(12px)
+    }
 }
 
 .text--big {
     @include text(18px);
+
+    @media (max-width: 768px) {
+        @include text(16px)
+    }
 }
 
 @mixin title($fontSize: 40px) {
@@ -53,15 +70,27 @@ body {
 }
 
 .title--big {
-    @include text(44px);
+    @include title(44px);
+
+    @media (max-width: 768px) {
+        @include title(26px)
+    }
 }
 
 .title {
     @include text;
+
+    @media (max-width: 768px) {
+        @include title(24px)
+    }
 }
 
 .title--small {
-    @include text(28px);
+    @include title(28px);
+
+    @media (max-width: 768px) {
+        @include title(22px)
+    }
 }
 
 .link-text {
@@ -72,13 +101,86 @@ body {
 
 
 .button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 60px;
     width: 100%;
     font-size: 18px;
-    background-color: #6421ff;
-    margin-top: 2vw;
-    margin-bottom: 8px;
+    background-color: variaveis.$corBotaoPrimario;
     color: variaveis.$corTexto;
     cursor: pointer;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corDeFundo;
+
+    &--secondary {
+        background-color: variaveis.$corBotaoSecundario;
+
+        &:hover {
+            background-color: lighten(variaveis.$corBotaoSecundario, 3%);
+        }
+    }
+
+    &--dark {
+        background-color: rgba(variaveis.$corBotaoDark, 0.8);
+        border-color: variaveis.$corTexto;
+
+        &:hover {
+            background-color: variaveis.$corTexto;
+            color: variaveis.$corDeFundo;
+        }
+
+    }
+}
+
+.image-text-section {
+    padding: 5.6vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    &__text__container {
+        padding: 0 2vw;
+    }
+
+    &--image-full-width {
+        display: block;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        &__text__container {
+            position: absolute;
+            height: 100%;
+            top: 0vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            left: 50%;
+
+            @media (max-width: 768px) {
+                position: relative;
+                left: 0;
+                width: 100%;
+            }
+        }
+
+    }
 }

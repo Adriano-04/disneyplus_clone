@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body>
+    <header class="header  header--is-hidden">
+        <div class="header__container">
+            <h1>
+                <img src="./src/images/disneyplus.svg" alt="disney+" class="header__logo">
+            </h1>
+            <ul class="header__links">
+                <li class="header__links__item">
+                    <a href="" class="button button--secondary">ASSINE AGORA</a>
+                </li>
+                <li class="header__links__item">
+                    <a href="" class="button button--dark">ENTRAR</a>
+                </li>
+            </ul>
+        </div>
+    </header>
     <section class="hero">   
         <div class="hero__content">
             <h1 class="hero__content__branding">
@@ -149,6 +164,129 @@
             *O preço pode variar caso a assinatura seja feita através de outras plataformas.
         </p>
     </section>
+    <section class="image-text-section">
+        <img src="./src/images/tv_pc_tablet_celular.png" alt="tv">
+        <div class="image-text-section__text__container">
+            <h2 class="title--big">Assista do seu jeito</h2>
+            <p class="text">
+                Aproveite a tela da TV ou assista no tablet, laptop, celular e outros
+                aparelhos. Nossa coleção de titulos em 4k não para de crescer.Além disso,para a felicidade de todos
+                é possivel assistir em até 4 telas ao mesmo tempo.
+            </p>
+        </div>
+    </section>
+    <section class="image-text-section image-text-section--image-full-width">
+        <picture>
+            <source media="(max-width: 768px)" srcset="./src/images/fundo_rei_leao_celular.png"/>
+            <img src="./src/images/fundo_rei_leao.png" alt="tv">
+        </picture>
+        <div class="image-text-section__text__container image-text-section--image-full-width__text__container">
+            <h2 class="title--big">Baixe filmes e séries</h2>
+            <p class="text">
+                Baixe e assista quando quiser. Assim, seus favoritos estão sempre com você,Até mesmo sem internet.
+            </p>
+        </div>
+    </section>
+    <section class="devices">
+        <h2 class="title--small">Disponivel em seus dispositivos favoritos</h2>
+        <ul class="devices__list">
+            <li class="devices__list__item">
+                <img src="./src/images/dispositivos/computador.png" alt="PC">
+                <h4 class="title--small">Computador</h4>
+                <ul class="text">
+                    <li>Chrome OS</li>
+                    <li>MacOS</li>
+                    <li>PC windows</li>
+                </ul>
+            </li>
+            <li class="devices__list__item">
+                <img src="./src/images/dispositivos/tv.png" alt="TV">
+                <h4 class="title--small">TV</h4>
+                <ul class="text">
+                    <li>Android TV</li>
+                    <li>Samsung</li>
+                    <li>Apple TV</li>
+                </ul>
+            </li>
+            <li class="devices__list__item">
+                <img src="./src/images/dispositivos/videogames.png" alt="console">
+                <h4 class="title--small">Videogames</h4>
+                <ul class="text">
+                    <li>PS5</li>
+                    <li>Xbox Series</li>
+                </ul>
+            </li>
+            <li class="devices__list__item">
+                <img src="./src/images/dispositivos/celular.png" alt="celular">
+                <h4 class="title--small">Celular e Tablets</h4>
+                <ul class="text">
+                    <li>Android</li>
+                    <li>iphone</li>
+                    <li>ipad</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section class="faq">
+        <h2 class="title--small">Perguntas frequentes</h2>
+        <ul class="faq__questions">
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__questions" data-faq-question>
+                    O que está incluido no disney+?
+                </div>
+                <div class="faq__questions__item__answer text--big">
+                    <p>Experiencia premium sem intervalos comerciais</p>
+                    <p>As melhores historias da disney,pixar,marvel tudo em um só lugar</p>
+                    <p>Groupwatch: Assista junto com amigos ou familiares, mesmo separados</p>
+                    <p></p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <img class="footer__logo" src="./src/images/disneyplus.svg" alt="disney">
+            <ul class="footer__links">
+                <li class="footer__links__item">
+                    <div class="language">
+                        <img src="./src/images/icones/globe.svg" alt="globo">
+                        <select name="" id="">
+                            <option>Inglês</option>
+                            <option selected>Português</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="footer__links__item">
+                    <a href="" class="text--small">Termos e condiçoes de uso</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="" class="text--small">Politica de privacidade</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="" class="text--small">Proteção de dados no brasil</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="" class="text--small">Anuncios personalizados</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="" class="text--small">Dispositivos compativeis</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="" class="text--small">Ajuda</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="" class="text--small">Sobre o disney+</a>
+                </li>
+            </ul>
+            <p class="text--small">
+                @2024 Todos os direitos reservados a disney, disney+, disney company
+            </p>
+            <p class="text--small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente maxime rem soluta quo nihil blanditiis illum ratione nisi adipisci, velit, dolorem assumenda nulla, totam deserunt dolore voluptas omnis dolores.
+            </p>
+        </div>
+    </footer>
     
 
     <script src="./src/scripts/main.js"></script>
